@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :dashboard
-  resources :projects
-  resources :tickets
+  resources :projects do
+    resources :tickets
+  end
   
   root to: "homepage#index" 
   # The priority is based upon order of creation: first created -> highest priority.
