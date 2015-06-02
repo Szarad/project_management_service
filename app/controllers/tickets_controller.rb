@@ -10,6 +10,7 @@ class TicketsController < ApplicationController
    def new
 
      @ticket = @project.tickets.new
+   
    end
   
     def edit
