@@ -9,9 +9,23 @@ class TicketsController < ApplicationController
      @ticket = @project.tickets.new
    end
   
+  def create
+    @ticket = @project.tickets.new(ticket_params)
+       if @ticket.save
+         redirect_to [@project, @ticket], notice: 'Child was successfully created.' 
+       else 
+         render 'new'
+     end
+  end
     private
 
   def load_project
     @project = Project.find(params[:project_id])
     end
-end
+  
+  
+  def ticket_params
+    params.require(:ticket).permit(:title, :description, :priority, :difficulty, :status)
+  end
+  end
+

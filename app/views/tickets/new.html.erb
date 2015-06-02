@@ -1,0 +1,26 @@
+<h1>Add a new ticket</h1>
+<%= form_for [@project, @ticket] do |f| %>
+  <p>
+    <%= f.label :title %><br/>
+    <%= f.text_field :title %>
+  </p>  
+  <p>
+    <%= f.label :description %><br/>
+    <%= f.text_area :description %>
+  </p> 
+  <p>
+    <%= f.label :priority %><br/>
+    <%= f.text_field :priority %>
+  </p>  
+ <p>
+   <%= f.label :difficulty %><br/>
+   <%= f.text_area :difficulty %>
+  </p> 
+  <p>
+    <%= f.label :status %><br/>
+    <%= f.text_area :status %>
+  </p> 
+ <p>
+   <%= f.submit "Add a new ticket" %><br/>
+  </p> 
+<% end %>
