@@ -5,11 +5,13 @@ one:
   description: MyString
   priority: MyString
   difficulty: MyString
-  status: MyString
+  status: 1
+  project_id: 1
 
 two:
   title: MyString
   description: MyString
   priority: MyString
   difficulty: MyString
-  status: MyString
+  status: 1
+  project_id: 1

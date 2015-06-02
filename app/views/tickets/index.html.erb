@@ -1,7 +1,0 @@
-<h1>Tickets</h1>
-<% @tickets.each do |ticket| %>
-<h2> <%= ticket.title %></h2>
-<h2> <%= ticket.description %></h2>
-<hr/>
-<% end %>
-<p> <%= link_to "Add a new ticket", new_ticket_path  %></p>
