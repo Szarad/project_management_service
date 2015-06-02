@@ -5,7 +5,7 @@ one:
   description: MyString
   priority: MyString
   difficulty: MyString
-  status: 1
+  status: MyString
   project_id: 1
 
 two:
@@ -13,5 +13,5 @@ two:
   description: MyString
   priority: MyString
   difficulty: MyString
-  status: 1
+  status: MyString
   project_id: 1
