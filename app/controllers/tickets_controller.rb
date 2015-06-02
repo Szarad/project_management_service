@@ -12,6 +12,16 @@ class TicketsController < ApplicationController
      @ticket = @project.tickets.new
    end
   
+    def edit
+      @ticket = @project.tickets.find(params[:id])
+    end
+  
+   def update
+     @ticket = @project.tickets.find(params[:id])
+     @ticket.update_attributes(ticket_params)
+     redirect_to @project
+   end
+  
   def create
     @ticket = @project.tickets.new(ticket_params)
        if @ticket.save
